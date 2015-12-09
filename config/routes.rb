@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   #   resources :products
       resources :posts, :projects
 
+
+    namespace :admin do
+      resources :posts, :comments, :projects
+    end
   # Example resource route with options:
   #   resources :products do
   #     member do
