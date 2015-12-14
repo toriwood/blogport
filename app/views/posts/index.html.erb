@@ -1,1 +1,11 @@
-<h1>Hello!</h1>
+<h1 class="super-title">All Blog Posts</h1>
+
+ 
+<% @posts.each do |post| %>
+	
+	<h1><%= link_to post.title, post_path(post) %></h1><br>
+	<h2><%= post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%b %d, %Y | %I:%M%p") %></h2>
+	<p><%= post.text %></p>
+
+
+<% end %>
