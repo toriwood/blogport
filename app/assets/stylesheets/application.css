@@ -13,3 +13,167 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+html {
+	background: url("geometric background.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+body {
+  font-size: 110%;
+  color: #1A3038;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top 0;
+  left 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #979589;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 0px 15px 0px black;
+}
+
+.nav {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#name {
+  display: none;
+}
+
+.wrapper {
+  padding-top: 50px;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #96B7C3;
+  clear: both;
+  opacity: 0.9;
+  filter: alpha(opacity=90);  /*for IE8 and earlier*/
+}
+
+.wrapper p {
+  opacity: 1;
+  filter: alpha(opacity=100);  /*for IE8 and earlier*/
+  font-size: 100%;
+  margin:10px;
+  padding: 10px;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  font-size: 160%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.social {
+    background-image: url(social.png);
+    background-repeat: no-repeat;
+    display: block;
+    float: right;
+    margin-top: 1px;
+    border-radius: 20%;
+}
+
+.social:hover {
+  margin-top: -2px;
+  box-shadow: 0px 0px 15px 0px black;
+}
+
+.transition{
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+#social-twitter {
+    width: 50px;
+    height: 50px;
+    background-position: 1px -2px;
+}
+
+#social-facebook {
+    width: 50px;
+    height: 50px;
+    background-position: -83px -2px;
+}
+
+#social-stackexchange {
+    width: 50px;
+    height: 50px;
+    background-position: -167px -2px;
+}
+
+#social-github {
+    width: 50px;
+    height: 50px;
+    background-position: -251px -2px;
+}
+
+
+
+@media screen and (min-width: 25em) {
+
+.wrapper {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #96B7C3;
+}
+
+#name {
+  display: inline;
+  width: 150px;
+  height: 50px;
+  float: left;
+  font-size: 150%;
+  margin-top: 10px;
+}
+
+#first-name {
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #3E7284;
+}
+
+#last-name {
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  color: white;
+  padding-left: 1px;
+}
+
+}
+
+@media screen and (min-width: 75em) {
+
+.wrapper {
+  height: 100%;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #96B7C3;
+}
+
+.nav {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#name {
+  width: 200px;
+  font-size: 175%;
+  margin-top: 10px;
+}
+
+
+}

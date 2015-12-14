@@ -8,7 +8,33 @@
 </head>
 <body>
 
+	<nav class="fixed-nav-bar">
+
+		<div class="nav">
+			<div id="name">
+				<span id="first-name">TORI</span>
+				<span id="last-name">WOOD</span>
+			</div>
+	
+
+			<%= link_to "", "https://twitter.com/toriwood8", target: "_blank", 
+				class: "social transition", id: "social-twitter" %> 
+			<%= link_to "", "https://www.facebook.com/tor.wood", target: "_blank", class: "social transition", id: "social-facebook" %> 
+			<%= link_to "", "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank", 
+				class: "social transition", id: "social-stackexchange" %> 
+			<%= link_to "", "https://github.com/toriwood", target: "_blank", 
+				class: "social transition", id: "social-github" %> 
+
+		</div>
+
+	</nav>
+
+
+<div class="wrapper">
+
 <%= yield %>
+
+</div>
 
 </body>
 </html>
