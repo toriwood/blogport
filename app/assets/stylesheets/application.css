@@ -137,7 +137,7 @@ h2,h3 {
   height: 50px;
 }
 
-.home-list a, a:hover, a:visited {
+.home-list a {
   color: #1A3038;
   text-decoration: none;
   text-shadow: none;
