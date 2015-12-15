@@ -54,11 +54,12 @@ a {
 a:hover {
   color: white;
   text-shadow: 0 0 2px #FFF;
+  text-decoration: underline;
 }
 
 a:visited {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a#back {
@@ -91,7 +92,7 @@ a#back {
   text-shadow: none;
 }
 
-.wrapper {
+#wrapper {
   padding-top: 50px;
   height: 100%;
   width: 90%;
@@ -102,7 +103,7 @@ a#back {
   filter: alpha(opacity=90);  /*for IE8 and earlier*/
 }
 
-.wrapper p {
+p {
   font-size: 100%;
   margin:10px;
   padding: 10px;
@@ -124,60 +125,75 @@ h2,h3 {
   border-bottom: 1px dotted #1A3038;
 }
 
+.home-list {
+  font-size: 1.75em;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 50px;
+} 
+
+.home-list div {
+  width: 50%;
+  height: 50px;
+}
+
+.home-list a, a:hover, a:visited {
+  color: #1A3038;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#projects {
+  background-image: url("arrows-white.png");
+  position: absolute;
+  margin-left: -75px;
+  margin-top: -16px;
+  width: 67px;
+  height: 67px;
+  background-position: 320px 250px;
+}
+
+#blog {
+  background-image: url("arrows-white.png");
+  position: absolute;
+  margin-left: 10px;
+  margin-top: -16px;
+  width: 67px;
+  height: 67px;
+  background-position: 256px 250px;
+}
+
 .super-title {
   font-size: 2em;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .social {
-    background-image: url(social.png);
-    background-repeat: no-repeat;
-    display: block;
     float: right;
-    margin-top: 1px;
-    border-radius: 20%;
+}
+ 
+.morph {
+  -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+       -o-transition: all 0.6s ease;
+      -ms-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+  
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
-.social:hover {
-  margin-top: -2px;
-  box-shadow: 0px 0px 15px 0px black;
-}
-
-.transition{
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    transition: all .3s linear;
-}
-
-#social-twitter {
-    width: 50px;
-    height: 50px;
-    background-position: 1px -2px;
-}
-
-#social-facebook {
-    width: 50px;
-    height: 50px;
-    background-position: -83px -2px;
-}
-
-#social-stackexchange {
-    width: 50px;
-    height: 50px;
-    background-position: -167px -2px;
-}
-
-#social-github {
-    width: 50px;
-    height: 50px;
-    background-position: -251px -2px;
-}
-
-
+/*MEDIA QUERIES*/
 @media screen and (min-width: 30em) {
 
-.wrapper {
+#wrapper {
   height: 100%;
   width: 80%;
   margin: 0 auto;
@@ -190,11 +206,20 @@ h2,h3 {
   margin-top: 10px;
 }
 
+.super-title {
+  font-size: 2.5em;
+  margin-top: 100px;
+}
+
+.home-list { 
+  font-size: 2em;
+}
+
 }
 
 @media screen and (min-width: 75em) {
 
-.wrapper {
+#wrapper {
   height: 100%;
   width: 1000px;
   margin: 0 auto;
@@ -207,7 +232,16 @@ h2,h3 {
 }
 
 #name {
+  width: 250px;
   font-size: 175%;
+}
+
+.super-title {
+  font-size: 3em;
+}
+
+.home-list {
+  font-size: 2.5em;
 }
 
 

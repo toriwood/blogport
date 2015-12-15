@@ -16,21 +16,21 @@
 				<%= link_to "WOOD", root_path, id: "last-name" %>
 			</div>
 	
+			<%= mail_to "victoria.ashley.wood@gmail.com", image_tag("social-gmail.png"), class: "social morph" %> 
 
-			<%= link_to "", "https://twitter.com/toriwood8", target: "_blank", 
-				class: "social transition", id: "social-twitter" %> 
-			<%= link_to "", "https://www.facebook.com/tor.wood", target: "_blank", class: "social transition", id: "social-facebook" %> 
-			<%= link_to "", "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank", 
-				class: "social transition", id: "social-stackexchange" %> 
-			<%= link_to "", "https://github.com/toriwood", target: "_blank", 
-				class: "social transition", id: "social-github" %> 
+			<%= link_to image_tag("social-facebook.png"), "https://www.facebook.com/tor.wood", target: "_blank", class: "social morph" %> 
+			
+			<%= link_to image_tag("social-stackexchange.png"), "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank", class: "social morph" %> 
 
+			<%= link_to image_tag("social-github.png"), "https://github.com/toriwood", target: "_blank", class: "social morph" %> 
+			
+		
 		</div>
 
 	</nav>
 
 
-<div class="wrapper">
+<div id="wrapper">
 
 <%= yield %>
 
