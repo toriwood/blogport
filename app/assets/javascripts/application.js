@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// code for switching divs with scroll
+
+var $header = $('.fixed-nav-bar'),
+		header_height = $('.fixed-nav-bar').height(),
+		intro_height = $('#intro').height(),
+		offset_val = intro_height - header_height;
+
+function navSlide() {
+	var scroll_top = $(window).scrollTop();
+
+	if (scroll_top >= offset_val) {
+		$header.addClass('fixed-nav-bar');
+	} else {
+		$header.removeClass('fixed-nav-bar');
+	}
+}
+
+$(window).scroll(navSlide);
