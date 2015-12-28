@@ -11,11 +11,15 @@
 	<nav class="fixed-nav-bar">
 
 		<div class="nav">
-			<div id="name">
-				<%= link_to "TORI", root_path, id: "first-name" %>
-				<%= link_to "WOOD", root_path, id: "last-name" %>
-			</div>
-	
+			<div class="nav-links">
+				<%= link_to image_tag("logo-small.png"), root_path, id: "logo-nav" %>
+			<ul>
+				<li><%= link_to "WORK", projects_path %></li>
+				<li><%= link_to "BLOG", posts_path %></li>
+				<li><%= link_to "ABOUT", "/" %></li>
+			</ul>
+		</div>
+
 			<%= mail_to "victoria.ashley.wood@gmail.com", image_tag("social-gmail.png"), class: "social morph" %> 
 
 			<%= link_to image_tag("social-facebook.png"), "https://www.facebook.com/tor.wood", target: "_blank", class: "social morph" %> 
@@ -36,6 +40,7 @@
 
 </div>
 
-Sign graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a>
+<h3 class="nav footer">Sign graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a></h3>
+
 </body>
 </html>

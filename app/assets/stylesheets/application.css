@@ -23,6 +23,10 @@ html {
 
 html, body {
   height: 100%;
+  height: -webkit-calc(100% - 25px);
+  height: -moz-calc(100% - 25px);
+  height: calc(100% - 25px);
+  margin: 0;
   font-size: 110%;
   color: #1A3038;
   font-family: Arial, Helvetica, sans-serif;
@@ -46,6 +50,21 @@ html, body {
   margin: 0 auto;
 }
 
+.nav-links a, .nav-links a:hover {
+  display: inline;
+  float: left;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+#logo-nav {
+  margin-top: -2px;
+}
+
 a {
   color: #1A3038;
   text-decoration: none;
@@ -62,34 +81,11 @@ a:visited {
   text-decoration: none;
 }
 
-a#back {
+a.back {
   font-weight: bold;
   float: right;
-  padding: 20px;
-}
-
-#name {
-  display: inline;
-  width: 50px;
-  height: 50px;
-  float: left;
-  font-size: 130%;
-}
-
-#first-name {
-  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: #3E7284;
-  text-decoration: none;
-  text-shadow: none;
-}
-
-#last-name {
-  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
-  color: white;
-  padding-left: 1px;
-  text-decoration: none;
-  text-shadow: none;
+  padding-top: 20px;
+  padding-right: 10px;
 }
 
 #wrapper {
@@ -105,7 +101,7 @@ a#back {
 
 p {
   font-size: 100%;
-  margin:10px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -113,8 +109,8 @@ h1 {
   font-weight: bold;
   font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
   font-size: 160%;
-  margin-left: 20px;
-  margin-top: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 h2,h3 {
@@ -126,17 +122,19 @@ h2,h3 {
 }
 
 .homelist {
+  height: 100%;
   font-size: 1.25em;
   font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
   text-align: center;
   opacity: 1;
   filter: alpha(opacity=100);  /*for IE8 and earlier*/
-  display: none;
+  /*display: none;*/
 } 
 
 div.homelist {
-  padding-top: 150px;
-  margin: 0;
+  padding-top: 125px;
+  margin-top: 0px;
+  height: 100%;
 }
 
 .homelist a {
@@ -145,7 +143,7 @@ div.homelist {
   text-shadow: none;
 }
 
-.homelist h2 {
+.homelist h2, h3 {
   border-bottom: none;
   padding-top: 10px;
 }
@@ -154,7 +152,27 @@ div.homelist {
   padding-left: 10px;
 }
 
-#projects {
+#scroll-hint {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: url("scroll-hint.png") no-repeat 2px 3px #1A3038;
+}
+
+#projects-blog {
+  background-color: #ffb2b2;
+  height: 100%;
+  height: -webkit-calc(100% - 25px);
+  height: -moz-calc(100% - 25px);
+  height: calc(100% - 25px);
+  padding-top: 0;
+  margin-top: -125px;
+}
+
+#projects-click {
 /*  float: right;
   margin-top: -150px;
   margin-left: -60px;
@@ -163,6 +181,22 @@ div.homelist {
 
 #blog {
   /*float: left;*/
+}
+
+.footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 25px;
+  background-color: #979589;
+  padding: 0;
+  margin: 0;
+  font-size: 75%;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .super-title {
@@ -202,12 +236,6 @@ div.homelist {
   background-color: #96B7C3;
 }
 
-#name {
-  width: 200px;
-  font-size: 150%;
-  margin-top: 10px;
-}
-
 .super-title {
   font-size: 2em;
 }
@@ -226,11 +254,6 @@ div.homelist {
 .nav {
   width: 1000px;
   margin: 0 auto;
-}
-
-#name {
-  width: 250px;
-  font-size: 175%;
 }
 
 .super-title {

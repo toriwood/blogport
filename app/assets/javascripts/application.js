@@ -15,22 +15,18 @@
 //= require turbolinks
 //= require_tree .
 
+// var h = $(window).height();
+// var w = $(window).width();
+  
+//   // sets style for scroll positioning
 
-// code for switching divs with scroll
 
-var $header = $('.fixed-nav-bar'),
-		header_height = $('.fixed-nav-bar').height(),
-		intro_height = $('#intro').height(),
-		offset_val = intro_height - header_height;
+ $(window).scroll(function() {
 
-function navSlide() {
-	var scroll_top = $(window).scrollTop();
+ 		if($(document).scrollTop() > 0) {
+    $('#scroll-hint').css("display", "none");
+  } else {
+    $('#scroll-hint').css("display", "block");
+  };
 
-	if (scroll_top >= offset_val) {
-		$header.addClass('fixed-nav-bar');
-	} else {
-		$header.removeClass('fixed-nav-bar');
-	}
-}
-
-$(window).scroll(navSlide);
+ });
