@@ -52,6 +52,11 @@
 
 	});
 
+} else {
+
+		document.getElementById("footer").style.display = "none";
+		document.getElementById("footer-wide").style.display = "block";
+
 };
 
 });

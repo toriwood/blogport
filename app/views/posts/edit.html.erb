@@ -1,0 +1,23 @@
+<p class="back">
+  <%= link_to "Back to post", post_path(@post) %>
+</p>
+<h1 class="super-title">Edit Blog Entry: <%= @post.title %></h1>
+
+
+<%= form_for(@post, url: post_path(@post), html: {method: "patch"}) do |f| %> 
+	
+	<p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :class => 'text-input' %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text, :class => 'text-input' %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Update Entry", :class => 'button' %>
+  </p>
+
+<% end %>

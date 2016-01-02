@@ -1,6 +1,9 @@
-<%= link_to "Back", root_path, class: "back" %>
-<h1 class="super-title">All Blog Posts</h1>
+<p class="back">
+<%= link_to "Home", root_path %><br>
+<%= link_to "Create a new entry here!", new_post_path %>
+</p>
 
+<h1 class="super-title">All Blog Posts</h1>
 
 <% @posts.each do |post| %>
 	
