@@ -6,7 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller_name %> <%= action_name %>">
+<div id="wrapper">
 
 	<nav class="fixed-nav-bar">
 
@@ -34,16 +35,17 @@
 	</nav>
 
 
-<div id="wrapper">
-
 <%= yield %>
 
+<div id="footer">
 
-<div class="nav footer">Sign graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a><div>
+<div>Site designed and coded by &copy; Tori Wood, <%= Time.now.year %></div>
+
+<div class="fine-print"> "<>" sign graphic by <a href="http://www.freepik.com/">Freepik</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a></div>
 
 </div>
 
-
+</div>
 
 </body>
 </html>

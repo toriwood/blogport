@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require init
 
 // var h = $(window).height();
 // var w = $(window).width();
@@ -30,3 +30,28 @@
   };
 
  });
+
+
+ $(document).on("page:change", function() {
+
+ 	if ($('body').hasClass("application")
+ 		&& $('body').hasClass("index")) {
+
+ 	document.getElementById("wrapper").style.width = "100%";
+
+	document.getElementById("footer").style.position = "relative";
+
+	$(document).ready(function blinker() {
+
+		if ($(document).scrollTop() == 0) {
+
+	  $('#scroll-hint').fadeOut(1700);
+		$('#scroll-hint').fadeIn(1700);
+		for (var start = 0; start <= 5; start++) {
+					blinker(); } }		
+
+	});
+
+};
+
+});

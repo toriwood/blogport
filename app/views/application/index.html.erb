@@ -1,33 +1,25 @@
 <div class="homelist">
 	<div id="top">
-		<h1> <%= image_tag("logo.png") %> <br><br>WEB DEVELOPER</h1>
+		<%= image_tag("logo.png") %> <br>
+			<h1>WEB DEVELOPER</h1>
 		<h2>HTML5 &#8226; CSS3 &#8226; JavaScript &#8226; Ruby on Rails</h2>
 		<div id="scroll-hint"></div>
 	</div>
 </div>
 		
 <div class="homelist" id="projects-blog">
-			<h2>I'm working on some cool things</h2>
-			<%= link_to image_tag("projects.png"), projects_path, id: "projects-click"
-		 %>		
+	<div id="projects">
 
-			<%= link_to image_tag("blog.png"), posts_path, id: "blog-click" %>
-			<%= link_to "I'm sharing my experiences", posts_path%>
+			<%= link_to image_tag("projects.png"), projects_path %>
+
+			<h1>I'm working on some exciting things. (This stuff is fun!)	</h1>
+
+	</div>		
+	<div id="blog">
+			
+			<h1>Read the blog. You might learn something.</h1>
+
+			<%= link_to image_tag("blog.png"), posts_path %>
+	</div>
+
 </div>
-
-<script type="text/javascript">
-		
-	document.getElementById("wrapper").style.width = "100%";
-
-	$(document).ready(function blinker() {
-
-		if ($(document).scrollTop() == 0) {
-
-	  $('#scroll-hint').fadeOut(1700);
-		$('#scroll-hint').fadeIn(1700);
-		for (var start = 0; start <= 5; start++) {
-					blinker(); } }
-		
-	});
-
-</script>
