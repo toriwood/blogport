@@ -39,8 +39,6 @@
 
  	document.getElementById("wrapper").style.width = "100%";
 
-	document.getElementById("footer").style.position = "relative";
-
 	$(document).ready(function blinker() {
 
 		if ($(document).scrollTop() == 0) {

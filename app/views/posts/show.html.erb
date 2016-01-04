@@ -3,4 +3,4 @@
 	<h1><%= @post.title %></h1>
 	<h2><%= @post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%b %d, %Y | %I:%M%p") %></h2>
 	<h2><%= link_to 'Edit', edit_post_path %> || <%= link_to('Remove', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}) %> </h2>
-	<p><%= @post.text %></p>
+	<p><%= h(@post.text).gsub(/\n/, '<br/>').html_safe %></p>

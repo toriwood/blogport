@@ -9,6 +9,6 @@
 	
 	<h1><%= link_to post.title, post_path(post) %></h1>
 	<h2><%= post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%b %d, %Y | %I:%M%p") %></h2>
-	<p><%= post.text %></p>
+	<p><%= h(post.text).gsub(/\n/, '<br/>').html_safe %></p>
 
 <% end %>
