@@ -73,7 +73,8 @@ p {
 }
 
 #logo-nav {
-  margin-top: -3px;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -184,13 +185,9 @@ div.homelist {
   text-shadow: none;
 }
 
-.homelist h1 {
-  padding-left: 0;
-}
 .homelist h2, h3 {
   border-bottom: none;
   padding: 0;
-  padding-top: 10px;
 }
 
 #top, #projects-blog {
@@ -205,9 +202,13 @@ div.homelist {
 }
 
 #top img {
-  padding-left: 10px;
-  max-width: 325px;
+  max-width: 400px;
+  width: 90%;
   height: auto;
+}
+
+#top h1 {
+  padding: 0;
 }
 
 #projects, #blog {
@@ -215,24 +216,23 @@ div.homelist {
 }
 
 #scroll-hint {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 100%;
+  height: 75px;
   margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background: url("scroll-hint.png") no-repeat 2px 3px #1A3038;
+  position: absolute;
+  bottom: 67px;
+  background: url("arrow.png") no-repeat center;
 }
 
 #projects-blog {
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(26, 48, 56);
   /*Standard*/
-  background-color: rgba(26,48,56,0.9);
+  background-color: rgba(26,48,56,0.7);
   /* For IE 5.5 - 7*/
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E61A3038, endColorstr=#E61A3038);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B21A3038, endColorstr=#B21A3038);
   /* For IE 8*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E61A3038, endColorstr=#E61A3038)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#B21A3038, endColorstr=#B21A3038)";
   width: 100%;
   height: 100%;
   color: #ffffff;
@@ -261,7 +261,7 @@ div.homelist {
   left: -30%;
 }
 
-#footer {
+.footer {
   z-index: 9999;
   width: 100%;
   height: 35px;
@@ -270,7 +270,7 @@ div.homelist {
   margin: 0;
   font-size: 75%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   opacity: 1;
   filter: alpha(opacity=100);  /*for IE8 and earlier*/
   box-shadow: 0px 0px 15px 0px black;
@@ -279,33 +279,16 @@ div.homelist {
   bottom: 0;
 }
 
-#footer a, #footer a:visited {
+.footer a, .footer a:visited {
   color: #FFFFFF;
 }
 
-#footer a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
 #footer-wide {
   display: none;
-  z-index: 9999;
-  width: 100%;
-  height: 35px;
-  background-color: #979589;
-  font-size: 75%;
-  text-align: center;
-  padding-top: 10px;
-  opacity: 1;
-  filter: alpha(opacity=100);  /*for IE8 and earlier*/
-  box-shadow: 0px 0px 15px 0px black;
-  position: relative;
-  left: 0;
-  bottom: 0;
-}
-
-.fine-print {
-  font-size: 65%;
 }
 
 .super-title {
@@ -316,6 +299,14 @@ div.homelist {
 
 .social {
     float: right;
+}
+
+.social p {
+  display: none;
+}
+
+.social p::hover {
+  display: block;
 }
  
 .morph {
@@ -365,15 +356,6 @@ div.homelist {
 }
 
 }
-
-@media screen and (min-width: 850px) {
-
-  #top img {
-    width: 40%;
-    height: 40%;
-  }
-}
-
 
 @media screen and (min-width: 1000px) {
 
