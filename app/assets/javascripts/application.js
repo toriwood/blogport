@@ -39,7 +39,8 @@
 
  	document.getElementById("wrapper").style.width = "100%";
 
-	document.getElementById("footer").style.position = "relative";
+	document.getElementById("footer").style.display = "relative";
+		document.getElementById("footer-wide").style.display = "none";
 
 	$(document).ready(function blinker() {
 
