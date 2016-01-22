@@ -23,10 +23,25 @@ html {
 
 html, body {
   height: 100%;
+  min-height: 100%;
   margin: 0;
   font-size: 110%;
   color: #1A3038;
   font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.1em;
+}
+
+::selection {
+  background-color: #1A3038;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #1A3038;
+  color: white;
 }
 
 .fixed-nav-bar {
@@ -58,7 +73,8 @@ html, body {
 }
 
 #logo-nav {
-  margin-top: -3px;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -113,11 +129,15 @@ a:visited {
   min-height: 100%;
   width: 90%;
   margin: 0 auto;
+<<<<<<< HEAD
   margin-bottom: -35px;
   overflow: auto;
   /*overflow-y: hidden;
   -ms-overflow-style: none; */
   /*overflow: -moz-scrollbars-none;*/
+=======
+  overflow: auto;
+>>>>>>> 68df62c2be305d6f5a98925bca17f546d2bc03be
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(150, 183, 195);
   /*Standard*/
@@ -168,20 +188,15 @@ div.homelist {
   padding: 0;
  }
 
-
 .homelist a {
   color: #1A3038;
   text-decoration: none;
   text-shadow: none;
 }
 
-.homelist h1 {
-  padding-left: 0;
-}
 .homelist h2, h3 {
   border-bottom: none;
   padding: 0;
-  padding-top: 10px;
 }
 
 #top, #projects-blog {
@@ -203,13 +218,12 @@ div.homelist {
 }
 
 #scroll-hint {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
+  width: 100%;
+  height: 75px;
   margin: 0 auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background: url("scroll-hint.png") no-repeat 2px 3px #1A3038;
+  position: absolute;
+  bottom: 67px;
+  background: url("arrow.png") no-repeat center;
 }
 
 #projects-blog {
@@ -249,7 +263,7 @@ div.homelist {
   left: -30%;
 }
 
-#footer {
+.footer {
   z-index: 9999;
   width: 100%;
   height: 35px;
@@ -258,7 +272,7 @@ div.homelist {
   margin: 0;
   font-size: 75%;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   opacity: 1;
   filter: alpha(opacity=100);  /*for IE8 and earlier*/
   box-shadow: 0px 0px 15px 0px black;
@@ -267,35 +281,16 @@ div.homelist {
   bottom: 0;
 }
 
-#footer a, #footer a:visited {
+.footer a, .footer a:visited {
   color: #FFFFFF;
 }
 
-#footer a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
 #footer-wide {
   display: none;
-  z-index: 9999;
-  width: 100%;
-  height: 35px;
-  background-color: #979589;
-  padding: 0;
-  margin: 0;
-  font-size: 75%;
-  text-align: center;
-  padding-top: 10px;
-  opacity: 1;
-  filter: alpha(opacity=100);  /*for IE8 and earlier*/
-  box-shadow: 0px 0px 15px 0px black;
-  position: relative;
-  left: 0;
-  bottom: 0;
-}
-
-.fine-print {
-  font-size: 65%;
 }
 
 .super-title {
@@ -306,6 +301,14 @@ div.homelist {
 
 .social {
     float: right;
+}
+
+.social p {
+  display: none;
+}
+
+.social p::hover {
+  display: block;
 }
  
 .morph {
@@ -359,7 +362,6 @@ div.homelist {
 }
 
 }
-
 
 @media screen and (min-width: 1000px) {
 

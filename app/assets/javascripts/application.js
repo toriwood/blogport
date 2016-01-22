@@ -48,7 +48,7 @@
 
 	  $('#scroll-hint').fadeOut(1700);
 		$('#scroll-hint').fadeIn(1700);
-		for (var start = 0; start <= 5; start++) {
+		for (var start = 0; start <= 15; start++) {
 					blinker(); } }		
 
 	});
