@@ -1,25 +1,13 @@
 <div class="homelist">
-	<div id="top">
-		<%= image_tag("TW-Logo-Full.png") %> <br>
+	
+		<%= link_to image_tag("projects.png"), projects_path, :class => "link-arrows", id: "projects" %>
+		
+		<div id="top">
+			<%= image_tag "TW-Logo-Full.png", :id => "top-logo" %> <br>
 			<h1>WEB DEVELOPER</h1>
-		<h2>HTML &#8226; CSS &#8226; JavaScript &#8226; Ruby on Rails</h2>
-	</div>
-	<div id="scroll-hint"></div>
+			<h2>HTML &#8226; CSS &#8226; JavaScript &#8226; Ruby on Rails</h2>
+		</div>
+		
+		<%= link_to image_tag("blog.png"), posts_path, :class => "link-arrows", id: "blog" %>
 </div>
 		
-<div class="homelist" id="projects-blog">
-	<div id="projects">
-
-			<%= link_to image_tag("projects.png"), projects_path %>
-
-			<h1>I'm working on some exciting things. (This stuff is fun!)	</h1>
-
-	</div>		
-	<div id="blog">
-			
-			<h1>Learn with me! Read the blog.</h1>
-
-			<%= link_to image_tag("blog.png"), posts_path %>
-	</div>
-
-</div>

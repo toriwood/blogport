@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>Tori Wood | Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 <body class="<%= controller_name %> <%= action_name %>">
 <div id="wrapper">
@@ -17,19 +19,33 @@
 			<ul>
 				<li><%= link_to "WORK", projects_path %></li>
 				<li><%= link_to "BLOG", posts_path %></li>
-				<li><%= link_to "ABOUT", "/" %></li>
+				<li><%= link_to "ABOUT", about_path %></li>
 			</ul>
+		</div>	
+
+		<div class="letschat">
+		  <button class="dropbtn">LET'S<br>CHAT!</button>
+			  <div class="dropdown-content">
+			    <%= mail_to "victoria.ashley.wood@gmail.com", image_tag("social-gmail.png") %>
+
+					<%= link_to image_tag("social-facebook.png"), "https://www.facebook.com/tor.wood", target: "_blank" %>
+			
+					<%= link_to image_tag("social-stackexchange.png"), "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank" %> 
+
+					<%= link_to image_tag("social-github.png"), "https://github.com/toriwood", target: "_blank" %>
+	  		</div>
 		</div>
 
-			<%= mail_to "victoria.ashley.wood@gmail.com", image_tag("social-gmail.png"), class: "social morph" %>
 
-			<%= link_to image_tag("social-facebook.png"), "https://www.facebook.com/tor.wood", target: "_blank", class: "social morph" %> 
-			
-			<%= link_to image_tag("social-stackexchange.png"), "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank", class: "social morph" %> 
+		<ul class="contact">	
+			<li><%= mail_to "victoria.ashley.wood@gmail.com", image_tag("social-gmail.png"), class: "social morph" %></li>
 
-			<%= link_to image_tag("social-github.png"), "https://github.com/toriwood", target: "_blank", class: "social morph" %> 
+			<li><%= link_to image_tag("social-facebook.png"), "https://www.facebook.com/tor.wood", target: "_blank", class: "social morph" %></li>
 			
-		
+			<li><%= link_to image_tag("social-stackexchange.png"), "http://stackoverflow.com/users/5674829/tori-w?tab=profile", target: "_blank", class: "social morph" %> </li>
+
+			<li><%= link_to image_tag("social-github.png"), "https://github.com/toriwood", target: "_blank", class: "social morph" %></li>
+		</ul>
 		</div>
 
 	</nav>
@@ -37,11 +53,9 @@
 
 <%= yield %>
 
-<div class="footer" id="footer">Site designed and coded by &copy; Tori Wood, <%= Time.now.year %>
-</div>
-
-<div class="footer" id="footer-wide">Site designed and coded by &copy; Tori Wood, <%= Time.now.year %>
-</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
 </html>

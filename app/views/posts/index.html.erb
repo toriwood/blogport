@@ -6,9 +6,14 @@
 <h1 class="super-title">All Blog Posts</h1>
 
 <% @posts.each do |post| %>
-	
+	<div class="container">
 	<h1><%= link_to post.title, post_path(post) %></h1>
 	<h2><%= post.created_at.in_time_zone("Eastern Time (US & Canada)").strftime("%b %d, %Y | %I:%M%p") %></h2>
-	<p><%= h(post.text).gsub(/\n/, '<br/>').html_safe %></p>
+	<p><%= h(post.text[0..250]).gsub(/\n/, '<br/>').html_safe %>
+		 <% if post.text.length > 250 %>
+		 <%= link_to "...read more", post %>
+		 <% end %>
+	</p>
+</div>
 
 <% end %>

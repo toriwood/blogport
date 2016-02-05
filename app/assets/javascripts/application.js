@@ -15,49 +15,14 @@
 //= require turbolinks
 //= require init
 
-// var h = $(window).height();
-// var w = $(window).width();
-  
-//   // sets style for scroll positioning
-
-
- $(window).scroll(function() {
-
- 		if($(document).scrollTop() > 0) {
-    $('#scroll-hint').css("display", "none");
-  } else {
-    $('#scroll-hint').css("display", "block");
-  };
-
- });
-
-
  $(document).on("page:change", function() {
 
  	if ($('body').hasClass("application")
- 		&& $('body').hasClass("index")) {
+ 		&& $('body').hasClass("index") || $('body').hasClass("static_pages")
+ 		&& $('body').hasClass("about") ) {
 
  	document.getElementById("wrapper").style.width = "100%";
-
-	document.getElementById("footer").style.display = "relative";
-		document.getElementById("footer-wide").style.display = "none";
-
-	$(document).ready(function blinker() {
-
-		if ($(document).scrollTop() == 0) {
-
-	  $('#scroll-hint').fadeOut(1700);
-		$('#scroll-hint').fadeIn(1700);
-		for (var start = 0; start <= 15; start++) {
-					blinker(); } }		
-
-	});
-
-} else {
-
-		document.getElementById("footer").style.display = "none";
-		document.getElementById("footer-wide").style.display = "block";
-
-};
+ 
+	} 
 
 });
