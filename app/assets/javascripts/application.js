@@ -23,6 +23,8 @@
 
  	document.getElementById("wrapper").style.width = "100%";
  
-	} 
+	} else {
+		$('body').css("padding-top", "50px");
+	}
 
 });

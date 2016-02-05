@@ -1,1 +1,8 @@
-_form.html.erb
+<div class="container">
+	<%= form_for @project, multipart: true do |f| %>
+	<%= f.text_field :name, :placeholder => "Project Name", class: "text-input" %> <br><br>
+	<%= f.text_field :description, :placeholder => "Description", class: "text-input" %> <br><br>
+	<%= f.file_field :image , class: "button" %> <br><br>
+	<%= f.submit "Save", class: "button" %>
+	<% end %>
+</div>

@@ -1,1 +1,17 @@
-<h1>projects</h1>
+<div class="back">
+	<%= link_to "Add a new project", new_project_path %></h2>
+</div>
+
+<h1 class="super-title">All Projects</h1>
+
+<% @project.each do |project| %>
+<div class="container">
+	<h1><%= link_to project.name, project %></h1>
+	<%= link_to image_tag(project.image.url(:medium)), project %>
+	<p><%= project.description %></p>
+</div>
+<% end %>
+
+<div class="container">
+	<h4>Check out <a href="http://www.github.com/toriwood">Github</a> for more!</h4>
+</div>

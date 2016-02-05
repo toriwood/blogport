@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/projects' => "projects#index"
 
 
-  resources :posts
+  resources :posts, :projects
 end

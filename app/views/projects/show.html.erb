@@ -1,0 +1,9 @@
+<div class="back">
+	<%= link_to "Back to Projects", projects_path %></h2>
+</div>
+
+<h1 class="super-title"><%= @project.name %></h1>
+<div class="container">
+	<%= image_tag @project.image.url(:medium) %>
+	<p><%= @project.description %></p>
+</div>
