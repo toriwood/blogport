@@ -1,0 +1,428 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	visibility: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	height: 400px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+html {
+	background: url("geometric-background.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  font-size: 110%;
+  color: #1A3038;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.1em;
+}
+
+.container {
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #1A3038;
+  border-radius: 7px;
+  background-color: #96B7C3;
+  text-align: center;
+}
+
+.container p {
+  text-align: left;
+}
+
+::selection {
+  background-color: #1A3038;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #1A3038;
+  color: white;
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #979589;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 0px 15px 0px black;
+}
+
+.nav {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-links a, .nav-links a:hover {
+  display: inline;
+  float: left;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 7px;
+  font-size: 0.9em;
+}
+
+#logo-nav {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 2px #FFF;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+#about {
+ text-align: center;
+ width: 80%;
+ margin: 0 auto;
+ margin-top: 90px;
+ padding-top: 20px;
+ border: 5px solid #1A3038;
+ border-radius: 10px;
+}
+
+#about p {
+  font-size: 1.3em;
+}
+
+.back {
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.back a {
+  border-bottom: none;
+  font-weight: bold;
+  float: right;
+}
+
+.button {
+  border: solid 4px #1A3038;
+  border-radius: 5px;
+  background: transparent;
+  color: #1A3038;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.text-input {
+  background-color: #979589;
+  border: solid 4px #1A3038;
+  border-radius: 5px;
+  font-family: 'Architects Daughter', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #1A3038;
+}
+
+#wrapper {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overflow: auto;
+  width: 90%;
+  margin: 0 auto;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(150, 183, 195);
+  /*Standard*/
+  background-color: rgba(150,183,195,0.85);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#D996B7C3, endColorstr=#D996B7C3);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D996B7C3, endColorstr=#D996B7C3)";
+}
+
+#wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  font-size: 100%;
+  margin: 10px;
+  padding: 10px;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 160%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+h2,h3 {
+  font-size: 110%;
+  padding: 10px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(248, 248, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+.homelist {
+  height: 100%;
+  font-size: 1.25em;
+  text-align: center;
+} 
+
+div.homelist {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+.homelist a {
+  color: #1A3038;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.homelist h2, h3 {
+  border-bottom: none;
+  padding: 0;
+}
+
+#top {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); 
+      -ms-transform: translate(-50%, -50%); 
+          transform: translate(-50%, -50%);
+}
+
+#top-logo {
+  max-width: 328px;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 15px;
+}
+
+#projects, #blog {
+  max-width: 200px;
+  height: auto;
+  display: none;
+}
+
+#projects {
+  float: right;
+  margin-bottom: -50px;
+}
+
+#blog {
+  float: left;
+}
+
+.super-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact {
+  display:none;
+}
+
+.letschat {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+    background-color: #979589;
+    color: white;
+    height: 50px;
+    font-size: .8em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: "Architects Daughter", Helvetica, Arial, sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #979589;
+    min-width: 55px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.letschat:hover .dropdown-content {
+    display: block;
+}
+
+.letschat:hover .dropbtn {
+    background-color: #1A3038;
+}
+
+.social {
+    float: right;
+}
+
+.social p {
+  display: none;
+}
+
+.social p::hover {
+  display: block;
+}
+ 
+.morph {
+  -webkit-transition: all 0.6s ease;
+     -moz-transition: all 0.6s ease;
+       -o-transition: all 0.6s ease;
+      -ms-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+}
+  
+.morph:hover {
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+
+
+@media screen and (min-width: 650px) {
+
+.super-title {
+  font-size: 2em;
+}
+
+.home-list {
+  font-size: 2.5em;
+}
+.contact {
+  display: inline;
+}
+
+.letschat {
+  display: none;
+}
+
+}
+
+@media screen and (min-width: 1000px) {
+
+  #wrapper {
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .nav {
+    width: 1000px;
+    margin: 0 auto;
+  } 
+
+}
