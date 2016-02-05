@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
+	
 	def index
-		@project = Project.all
+		@projects = Project.all
 	end
 
 	def new
@@ -28,8 +29,26 @@ class ProjectsController < ApplicationController
 		
 	end
 
+	def update
+		@project = Project.find(params[:id])
+		@project.update(project_params)
+		
+		if @project.save
+			flash[:success] = "Project updated successfully!"
+			redirect_to @project
+		else
+			flash[:error] = "There was a problem updating the project."
+			redirect_to action: :edit
+		end
+	end
 
-
+	def destroy
+		@project = Project.find(params[:id])
+		@projects = Project.all
+		
+		@project.destroy
+		redirect_to action: :index
+	end
 
 	private
 
