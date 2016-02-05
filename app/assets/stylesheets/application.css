@@ -15,7 +15,7 @@
  */
 
 html {
-	background: url("geometric background.jpg") no-repeat center center fixed;
+	background: url("geometric-background.jpg") no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -170,10 +170,6 @@ a:visited {
 
 #wrapper::-webkit-scrollbar {
   display: none;
-}
-
-div {
-  text-decoration: center;
 }
 
 p {
